@@ -40,6 +40,12 @@ src/
   assets/       # Images, fonts, static files
 ```
 
+## Rules from the prompting drill
+
+1. Forms must validate on submit and render errors inline (`role="alert"`, linked via `aria-describedby`), never via `alert()` or `window.confirm()`.
+2. Any input handling secrets or tokens must be masked by default with an explicit show/hide toggle, and never logged to the console.
+3. No feature involving validation, auth, or storage logic ships without a Vitest + React Testing Library test covering the empty/missing-input case, one invalid-input case, and one valid-input case.
+
 ## Notes for AI Assistants
 
 - This is a learning project — prefer explaining *why* a change is made, not just making it silently.
